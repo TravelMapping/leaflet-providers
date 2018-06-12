@@ -76,6 +76,19 @@
 	 */
 
 	L.TileLayer.Provider.providers = {
+		TMBlank: {
+			url: 'http://travelmapping.net/lib/empty.gif',
+		        options: {
+			        maxZoom: 22,
+				attribution: 'Blank tiles: &copy; James D. Teresco and the <a href="http://travelmapping.net">Travel Mapping</a> project'
+			},
+		        variants: {
+				White: {},
+				Black: {
+					url: 'http://travelmapping.net/lib/black.gif'
+				}
+			}
+		},
 		OpenStreetMap: {
 			url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 			options: {
