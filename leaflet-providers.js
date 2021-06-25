@@ -77,15 +77,15 @@
 
 	L.TileLayer.Provider.providers = {
 		TMBlank: {
-			url: 'http://travelmapping.net/lib/empty.gif',
+			url: 'https://travelmapping.net/lib/empty.gif',
 		        options: {
 			        maxZoom: 22,
-				attribution: 'Blank tiles: &copy; James D. Teresco and the <a href="http://travelmapping.net">Travel Mapping</a> project'
+				attribution: 'Blank tiles: &copy; James D. Teresco and the <a href="https://travelmapping.net">Travel Mapping</a> project'
 			},
 		        variants: {
 				White: {},
 				Black: {
-					url: 'http://travelmapping.net/lib/black.gif'
+					url: 'https://travelmapping.net/lib/black.gif'
 				}
 			}
 		},
