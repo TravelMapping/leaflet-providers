@@ -58,17 +58,17 @@
 			return true;
 		}
 		var overlayPatterns = [
-			'^(OpenWeatherMap|OpenSeaMap)',
-			'OpenMapSurfer.AdminBounds',
+			'^(OpenWeatherMap|OpenSeaMap|OpenSnowMap)',
+			'OpenMapSurfer.(Hybrid|AdminBounds|ContourLines|Hillshade|ElementsAtRisk)',
 			'Stamen.Toner(Hybrid|Lines|Labels)',
-			'Acetate.(foreground|labels|roads)',
 			'Hydda.RoadsAndLabels',
 			'^JusticeMap',
-			'OpenInfraMap.(Power|Telecom|Petroleum|Water)',
+			'OpenAIP',
 			'OpenPtMap',
 			'OpenRailwayMap',
 			'OpenFireMap',
-			'SafeCast'
+			'SafeCast',
+			'WaymarkedTrails.(hiking|cycling|mtb|slopes|riding|skating)'
 		];
 
 		return providerName.match('(' + overlayPatterns.join('|') + ')') !== null;
@@ -80,10 +80,10 @@
 			return true;
 		}
 		// reduce the number of layers previewed for some providers
-		if (providerName.startsWith('HERE') || providerName.startsWith('OpenWeatherMap') || providerName.startsWith('MapBox')) {
+		if (providerName.startsWith('HERE') || providerName.startsWith('OpenWeatherMap') || providerName.startsWith('MapBox') || providerName.startsWith('MapTiler')) {
 			var whitelist = [
-				'HERE.normalDay',
-				'HERE.hybridDay',
+				// API threshold almost reached, disabling for now.
+				// 'HERE.normalDay',
 				'OpenWeatherMap.Clouds',
 				'OpenWeatherMap.Pressure',
 				'OpenWeatherMap.Wind'
